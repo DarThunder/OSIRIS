@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OSIRIS · Iniciar sesión</title>
+    <link rel="stylesheet" href="/osiris/style.css" />
+  </head>
+  <body data-mode="authorize">
+    <main>
+      <h1>OSIRIS</h1>
+      <p id="context" class="muted"></p>
+
+      <nav>
+        <button type="button" id="tab-login" class="tab active">Entrar</button>
+        <button type="button" id="tab-register" class="tab">
+          Crear cuenta
+        </button>
+      </nav>
+
+      <form id="login-form">
+        <label
+          >Usuario
+          <input
+            id="login-username"
+            autocomplete="username"
+            required
+            maxlength="128"
+            autofocus
+          />
+        </label>
+        <label
+          >Contraseña
+          <input
+            id="login-password"
+            type="password"
+            autocomplete="current-password"
+            required
+            maxlength="256"
+          />
+        </label>
+        <button class="primary" type="submit">Entrar</button>
+      </form>
+
+      <form id="register-form" hidden>
+        <label
+          >Usuario
+          <input
+            id="register-username"
+            autocomplete="username"
+            required
+            minlength="3"
+            maxlength="64"
+          />
+        </label>
+        <label
+          >Contraseña (mínimo 10 caracteres)
+          <input
+            id="register-password"
+            type="password"
+            autocomplete="new-password"
+            required
+            minlength="10"
+            maxlength="128"
+          />
+        </label>
+        <label id="invite-row"
+          >Código de invitación
+          <input id="register-invite" autocomplete="off" maxlength="128" />
+        </label>
+        <button class="primary" type="submit">Crear cuenta</button>
+      </form>
+
+      <p id="msg" role="alert"></p>
+    </main>
+    <script type="module" src="/osiris/app.js"></script>
+  </body>
+</html>

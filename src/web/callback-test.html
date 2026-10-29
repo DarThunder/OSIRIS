@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSIRIS · Prueba del flujo</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <h1>Prueba del flujo</h1>
+    <p class="muted">Recorre authorize → code → token con PKCE.</p>
+    <label>Audiencia
+      <input id="aud" value="omnicast">
+    </label>
+    <p></p>
+    <button id="start" class="primary" type="button">Iniciar login</button>
+    <pre id="out" hidden></pre>
+  </main>
+  <script type="module" src="/callback-test.js"></script>
+</body>
+</html>
